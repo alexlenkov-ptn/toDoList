@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">toDoList</string>
+    <string name="editTextTextHint">Enter text:</string>
+    <string name="radio_button_text_low">Low</string>
+    <string name="radio_button_text_medium">Medium</string>
+    <string name="radio_button_text_high">High</string>
+    <string name="card_text_save">Save</string>
+    <string name="toast_for_text">Заполните поля с текстом</string>
 </resources>
