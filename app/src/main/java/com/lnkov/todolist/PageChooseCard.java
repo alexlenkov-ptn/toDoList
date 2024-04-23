@@ -21,6 +21,7 @@ public class PageChooseCard extends AppCompatActivity {
     private RadioButton cardRadioButtonLow;
     private RadioButton cardRadioButtonMedium;
     private Button cardButtonSave;
+    private DataBase dataBase = DataBase.getInstance();
 
 
     @Override
@@ -58,8 +59,14 @@ public class PageChooseCard extends AppCompatActivity {
                     R.string.toast_for_text,
                     Toast.LENGTH_SHORT
             ).show();
+        }else {
+            int priority = getPriority();
+            int id = dataBase.getNotes().size();
+            Note note = new Note(id, text, priority);
+            dataBase.add(note);
+
+            finish();
         }
-        int priority = getPriority();
     }
 
     private int getPriority() {
